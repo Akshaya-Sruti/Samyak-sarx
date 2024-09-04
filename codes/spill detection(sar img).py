@@ -34,8 +34,9 @@ process_id = process_ids[:30]
 print("process_id", process_id)
 print(merged_cube.band("amplitude"))"""
 #oil_spill = oil_spill.save_result(format="netCDF")
-job = oil_spill.execute_batch(
-    title="Oil spill detection",
-    outputfile="OilSpill.nc",
-    format="netCDF"
-)
+# job = oil_spill.execute_batch(
+#     title="Oil spill detection",
+#     outputfile="OilSpill.nc",
+#     format="netCDF"
+# )
+oil_spill.download("oil_spill.tiff")
